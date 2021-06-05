@@ -17,12 +17,12 @@ public class HomePageTest extends mainClass {
 	public HomePageTest() {
 		super();
 	}
-	
-    @BeforeClass
+
+	@BeforeClass
 	public void setUp() {
-    	openBrowser("chrome");
+		openBrowser("chrome");
 		signin.lunchUrl(mainclass.prop.getProperty("openurl"));
-		
+
 		signin=PageFactory.initElements(mainclass.driver, SignInPage.class);
 		signin.clickOnSignInBtn();
 		implicitlyWait();
@@ -30,21 +30,15 @@ public class HomePageTest extends mainClass {
 		signin.EnterPassword();
 		signin.clickOnsignin();
 	}
+	@Test(priority=1)
+	public void EnterSearchbar() {
+		home.EnterSearchBarText();
+		home.SelectSpeakers();
+		home.SearchBrand();
+		home.SonySpeakerclick();
+		home.clickBluethoothSpeakar();
 
 
-		
+	}
 
-    @Test(priority=1)
-    /*public void ElectronicsPageTest() {
-    	
-    	home.ElectronicsPagelist();
-        home.clickOnSpeakarsTab();
-        implicitlyWait();
-    }*/
-    
-    public void EnterSearchbar() {
-    	home.EnterSearchBarText();
-    	
-    }
-	
 }

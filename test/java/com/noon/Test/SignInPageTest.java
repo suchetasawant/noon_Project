@@ -19,7 +19,7 @@ public class SignInPageTest extends mainClass {
 	public void setUp() {
 		openBrowser("chrome");
 		signin.lunchUrl(mainclass.prop.getProperty("openurl"));
-		
+
 		signin=PageFactory.initElements(mainclass.driver, SignInPage.class);
 		signin.clickOnSignInBtn();
 		implicitlyWait();
@@ -27,9 +27,6 @@ public class SignInPageTest extends mainClass {
 		signin.EnterPassword();
 		signin.clickOnsignin();
 	}
-
-
-
 	public void teardown() {
 		driver.quit();
 	}

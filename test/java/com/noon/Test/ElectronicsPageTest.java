@@ -17,36 +17,33 @@ public class ElectronicsPageTest extends mainClass{
 	HomePage Page2= new HomePage();
 	ElectronicsPage Page3= new ElectronicsPage();
 	
-	
+
 	public  ElectronicsPageTest() {
 		super();
 	}
-	
-    @BeforeClass
+
+	@BeforeClass
 	public void setUp() {
 		openBrowser("chrome");
 		Page.lunchUrl(Page1.prop.getProperty("openurl"));
-
-		
-
 		SignInPage signin=PageFactory.initElements(Page1.driver, SignInPage.class);
-		
+
 		signin.clickOnsignin();
-	    signin.EnterEmailId();
-	    signin.EnterPassword();
-	    signin.clickOnsignin();
-		}
-    
-    @Test
-    public void MoveToElectronicsPageTest() {
-    	Page3.ElectronicsPagelist();
-    }
-    
-	
-    @AfterClass
+		signin.EnterEmailId();
+		signin.EnterPassword();
+		signin.clickOnsignin();
+	}
+
+	@Test
+	public void MoveToElectronicsPageTest() {
+		Page3.ElectronicsPagelist();
+	}
+
+
+	@AfterClass
 	public void teardown() {
 		driver.quit();
 	}
-	
+
 
 }
