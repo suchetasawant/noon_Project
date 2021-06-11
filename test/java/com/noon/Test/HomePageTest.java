@@ -35,8 +35,8 @@ public class HomePageTest extends mainClass {
 		home.EnterSearchBarText();
 		home.SelectSpeakers();
 		home.SearchBrand();
-		home.SonySpeakerclick();
 		home.clickBluethoothSpeakar();
+		home.SonySpeakerclick();
 
 
 	}
